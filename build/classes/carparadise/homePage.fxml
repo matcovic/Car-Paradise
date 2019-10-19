@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="736.0" prefWidth="1138.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="carparadise.HomePageController">
+    <stylesheets>
+        <URL value="@homepage.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane cache="true" layoutX="923.0" prefHeight="736.0" prefWidth="215.0" style="-fx-background-color: #333333;">
+         <children>
+            <AnchorPane layoutX="12.0" layoutY="216.0" prefHeight="335.0" prefWidth="193.0" style="-fx-background-color: #DD4F42;">
+               <children>
+                  <TextField fx:id="lowerBoundPrice" layoutX="14.0" layoutY="164.0" prefHeight="26.0" prefWidth="170.0" promptText="From" style="-fx-background-color: #ffff;" />
+                  <TextField fx:id="upperBoundPrice" layoutX="14.0" layoutY="206.0" prefHeight="26.0" prefWidth="170.0" promptText="To" style="-fx-background-color: #ffff;" />
+                  <Label layoutX="14.0" layoutY="136.0" prefHeight="21.0" prefWidth="94.0" text="Price Range:">
+                     <font>
+                        <Font name="Bodoni MT" size="17.0" />
+                     </font></Label>
+                  <Button blendMode="SRC_ATOP" layoutX="42.0" layoutY="267.0" mnemonicParsing="false" onAction="#filterHandleButton" opacity="0.8" prefHeight="32.0" prefWidth="115.0" style="-fx-background-color: #333333;" text="Filter" textFill="WHITE">
+                     <font>
+                        <Font name="Bodoni MT" size="17.0" />
+                     </font>
+                  </Button>
+                  <ComboBox fx:id="makeComboBox" layoutX="7.0" layoutY="31.0" onAction="#makeComboBoxButtonAction" prefHeight="29.0" prefWidth="185.0" promptText="Makes" />
+                  <ComboBox fx:id="modelComboBox" layoutX="7.0" layoutY="73.0" onAction="#modelComboBoxButtonAction" prefHeight="29.0" prefWidth="185.0" promptText="Models" />
+               </children>
+            </AnchorPane>
+            <TitledPane blendMode="DIFFERENCE" layoutX="35.0" layoutY="46.0" prefHeight="122.0" prefWidth="146.0" text="Your Dashboard">
+               <content>
+                  <VBox prefHeight="96.0" prefWidth="145.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#profileHandleButton" prefHeight="25.0" prefWidth="152.0" text="User Profile" />
+                        <Button mnemonicParsing="false" onAction="#sellCarHandleButton" prefHeight="25.0" prefWidth="152.0" text="Sell Your Car" />
+                        <Button mnemonicParsing="false" onAction="#logOutHandleButton" prefHeight="25.0" prefWidth="152.0" text="Log out" />
+                     </children>
+                  </VBox>
+               </content>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TitledPane>
+            <Label fx:id="welcomeLabel" alignment="CENTER" layoutX="8.0" prefHeight="46.0" prefWidth="193.0" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="77.0" prefWidth="923.0" style="-fx-background-color: #333333;">
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="94.0" layoutX="8.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/cpLogo2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="46.0" fitWidth="124.0" layoutX="89.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/car.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="384.0" layoutY="17.0" text="Car Paradise" textFill="#dd4f42">
+               <font>
+                  <Font name="Haettenschweiler" size="39.0" />
+               </font>
+            </Label>
+            <Label layoutX="539.0" layoutY="38.0" text="....Shop new &amp; used cars" textFill="#dd4f42">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <TableView fx:id="mainTable" layoutY="77.0" opacity="0.67" prefHeight="607.0" prefWidth="923.0" style="-fx-background-color: #333833;">
+        <columns>
+          <TableColumn fx:id="idCol" prefWidth="61.0" text="ID" />
+            <TableColumn fx:id="pictureCol" prefWidth="243.0" text="Picture" />
+          <TableColumn fx:id="brandCol" prefWidth="191.0" text="Brand" />
+            <TableColumn fx:id="ModelCol" prefWidth="200.0" text="Model" />
+            <TableColumn fx:id="priceCol" prefWidth="209.0" text="Price" />
+        </columns>
+      </TableView>
+      <Label fx:id="errorMessage" layoutX="240.0" layoutY="654.0" prefHeight="18.0" prefWidth="193.0" />
+      <AnchorPane blendMode="COLOR_BURN" layoutY="684.0" prefHeight="52.0" prefWidth="923.0" style="-fx-background-color: #333833;">
+         <children>
+            <Button blendMode="MULTIPLY" layoutX="763.0" layoutY="10.0" mnemonicParsing="false" onAction="#showDetailsHandleButton" prefHeight="32.0" prefWidth="146.0" text="Show Details">
+               <effect>
+                  <ColorAdjust brightness="-0.31" />
+               </effect>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

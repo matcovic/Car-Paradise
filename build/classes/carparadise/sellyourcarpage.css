@@ -1,0 +1,14 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+.backbutton{
+    -fx-background-image: url(images/backButtonIcon.png);
+    -fx-background-size: 82px 38px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}

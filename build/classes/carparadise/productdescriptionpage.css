@@ -1,0 +1,14 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.table-view .table-cell{
+    -fx-font-weight:bold;
+    -fx-font-size:20px;
+}
+.table-row-cell:focused {
+    -fx-background-color:black;
+}
