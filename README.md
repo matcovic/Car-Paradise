@@ -43,7 +43,7 @@ II.	Software requirements:
 
 Limitations:
 •	Real-time Bidding System
-•	Real-time Messenger
+•	Real-time Messenger ||
 We couldn’t implement it due to less knowledge in Socket Programming & Networking
 Future Works:
 In this section, you need to mention which features you want to implement in future and what will do with this project in future.
