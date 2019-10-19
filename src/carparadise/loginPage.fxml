@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="611.0" prefWidth="1095.0" style="-fx-background-color: #333333;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="carparadise.LoginPageController">
+   <children>
+      <AnchorPane layoutX="617.0" layoutY="91.0" prefHeight="429.0" prefWidth="375.0" style="-fx-background-color: #DD4F42;">
+         <children>
+            <TextField fx:id="signInUsername" layoutX="45.0" layoutY="94.0" prefHeight="30.0" prefWidth="286.0" promptText="Username:" />
+            <PasswordField fx:id="signInPassword" layoutX="45.0" layoutY="155.0" prefHeight="30.0" prefWidth="286.0" promptText="Password:" />
+            <Button defaultButton="true" layoutX="100.0" layoutY="254.0" mnemonicParsing="false" onAction="#signInHandleButton" prefHeight="30.0" prefWidth="176.0" style="-fx-background-color: #583333;" text="Sign In" textFill="WHITE">
+               <effect>
+                  <Reflection fraction="1.0" topOpacity="0.23" />
+               </effect></Button>
+            <Button blendMode="SRC_ATOP" layoutX="128.0" layoutY="360.0" mnemonicParsing="false" onAction="#forgotPasswordHandleButton" prefHeight="31.0" prefWidth="121.0" style="-fx-background-color: #583333;" text="Forgot Password?" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <effect>
+                  <Reflection fraction="0.51" topOpacity="0.38" />
+               </effect>
+            </Button>
+            <Label layoutX="142.0" layoutY="34.0" text="Sign In" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="33.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="87.0" layoutY="187.0" prefHeight="60.0" prefWidth="375.0" text="Welcome To Car Paradise" textFill="WHITE">
+         <font>
+            <Font name="Georgia" size="33.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <Label layoutX="87.0" layoutY="247.0" text="Shop new &amp; used cars, research &amp; compare models, &#10;find sellers, calculate payments, sell/trade your &#10;car &amp; more at CAR PARADISE" textFill="#e4b6b6">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <ImageView blendMode="RED" fitHeight="353.0" fitWidth="558.0" layoutX="40.0" layoutY="139.0" opacity="0.51" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/loginPageImage.JPG" />
+         </image>
+      </ImageView>
+      <Button layoutX="87.0" layoutY="351.0" mnemonicParsing="false" onAction="#signUpHandleButton" prefHeight="33.0" prefWidth="190.0" style="-fx-background-color: #F26350;" text="Sign Up" />
+      <ImageView fitHeight="137.0" fitWidth="190.0" layoutX="40.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/cpLogo2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="177.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/car.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

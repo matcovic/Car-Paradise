@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="642.0" prefWidth="360.0" style="-fx-background-color: #F05122;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="carparadise.SendMessageToTheSellerController">
+    <stylesheets>
+        <URL value="@sendmessagetotheseller.css" />
+    </stylesheets>
+   <children>
+      <ScrollPane layoutX="45.0" layoutY="276.0">
+         <content>
+            <TextArea fx:id="toSellerMessageTextArea" prefHeight="256.0" prefWidth="258.0" text="Hello, I am interested in your Car that I saw on Car Paradise. Can you please send me more details about it? Thanks." wrapText="true" />
+         </content>
+      </ScrollPane>
+      <Label layoutX="45.0" layoutY="253.0" text="Write your message:" />
+      <Label layoutX="78.0" layoutY="22.0" text="Send message to the seller">
+         <font>
+            <Font name="Bell MT Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="toSellerNameField" layoutX="45.0" layoutY="76.0" prefHeight="33.0" prefWidth="260.0" promptText="Name:" />
+      <Button blendMode="MULTIPLY" layoutX="117.0" layoutY="577.0" mnemonicParsing="false" onAction="#toSellerSendHandleButton" prefHeight="33.0" prefWidth="117.0" text="Send" />
+      <TextField fx:id="toSellerEmailField" layoutX="45.0" layoutY="136.0" prefHeight="33.0" prefWidth="260.0" promptText="Email:" />
+      <TextField fx:id="toSellerContactNoField" layoutX="45.0" layoutY="196.0" prefHeight="33.0" prefWidth="260.0" promptText="Contact No:" />
+      <Label fx:id="errorMessageLabel" alignment="CENTER" layoutX="67.0" layoutY="543.0" prefHeight="25.0" prefWidth="216.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="736.0" prefWidth="1138.0" style="-fx-background-color: #717471;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="carparadise.UserProfileController">
+   <children>
+      <Label fx:id="emailLabel" layoutX="320.0" layoutY="148.0" prefHeight="34.0" prefWidth="333.0" text="rffff">
+         <font>
+            <Font name="Bodoni MT Bold" size="27.0" />
+         </font></Label>
+      <Label fx:id="nameLabel" layoutX="320.0" layoutY="113.0" prefHeight="34.0" prefWidth="333.0" text="dddd">
+         <font>
+            <Font name="Bodoni MT Bold" size="27.0" />
+         </font></Label>
+      <Label fx:id="useNamelabel" layoutX="320.0" layoutY="77.0" prefHeight="39.0" prefWidth="333.0" text="ffffff">
+         <padding>
+            <Insets bottom="5.0" />
+         </padding>
+         <font>
+            <Font name="Bodoni MT Bold" size="27.0" />
+         </font>
+      </Label>
+      <VBox layoutX="107.0" layoutY="77.0" prefHeight="162.0" prefWidth="204.0">
+         <children>
+            <Label alignment="CENTER_RIGHT" prefHeight="11.0" prefWidth="208.0" text="User Name:">
+               <font>
+                  <Font name="Bodoni MT Bold" size="27.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="39.0" prefWidth="211.0" text="Name:">
+               <font>
+                  <Font name="Bodoni MT Bold" size="27.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="39.0" prefWidth="210.0" text="Email:">
+               <font>
+                  <Font name="Bodoni MT Bold" size="27.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="58.0" prefWidth="204.0" text="Change Password:">
+               <font>
+                  <Font name="Bodoni MT Bold" size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <TableView fx:id="historyTable" layoutX="104.0" layoutY="272.0" prefHeight="354.0" prefWidth="933.0">
+        <columns>
+          <TableColumn fx:id="idCol" prefWidth="61.0" text="Id" />
+          <TableColumn fx:id="pictureCol" prefWidth="243.0" text="Picture" />
+            <TableColumn fx:id="brandCol" prefWidth="191.0" text="Brand" />
+            <TableColumn fx:id="ModelCol" prefWidth="200.0" text="Model" />
+            <TableColumn fx:id="priceCol" prefWidth="209.0" text="Price" />
+        </columns>
+      </TableView>
+      <Label fx:id="errorMessageLabel" layoutX="107.0" layoutY="239.0" prefHeight="32.0" prefWidth="263.0" textFill="#2f0eb2">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="104.0" layoutY="641.0" prefHeight="39.0" prefWidth="153.0" text="Select Buyer:">
+         <font>
+            <Font name="Bodoni MT Bold" size="27.0" />
+         </font>
+      </Label>
+      <TextField fx:id="selectBuyerTextField" layoutX="270.0" layoutY="641.0" prefHeight="39.0" prefWidth="248.0" promptText="Enter Username">
+         <font>
+            <Font name="Arial" size="19.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="changePasswordTextField" layoutX="320.0" layoutY="194.0" prefHeight="36.0" prefWidth="248.0" promptText="Enter Password">
+         <font>
+            <Font name="Arial" size="19.0" />
+         </font>
+      </TextField>
+      <Button layoutX="576.0" layoutY="197.0" mnemonicParsing="false" onAction="#setPasswordHandleButton" prefHeight="30.0" prefWidth="106.0" text="Set Password">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="528.0" layoutY="645.0" mnemonicParsing="false" onAction="#setUsernameHandleButton" text="Set Username">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="userPageMessageLabel" layoutX="270.0" layoutY="688.0" prefHeight="27.0" prefWidth="311.0" textFill="#2c0aee">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="-2.0" prefHeight="67.0" prefWidth="1138.0" style="-fx-background-color: #384F7B;">
+         <children>
+            <Button blendMode="COLOR_DODGE" layoutX="26.0" layoutY="15.0" mnemonicParsing="false" onAction="#closeHandleButton" prefHeight="38.0" prefWidth="82.0" styleClass="backbutton" stylesheets="@sellyourcarpage.css" />
+            <Label layoutX="487.0" layoutY="21.0" text="User Profile" textFill="WHITE">
+               <font>
+                  <Font name="Britannic Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="1044.0" layoutY="44.0" text="Car Paradise" textFill="WHITE">
+               <font>
+                  <Font name="Century Schoolbook Italic" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

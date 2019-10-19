@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="611.0" prefWidth="1095.0" style="-fx-background-color: #93C2E6;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="carparadise.SellYourCarPageController">
+    <stylesheets>
+        <URL value="@sellyourcarpage.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane prefHeight="67.0" prefWidth="1262.0" style="-fx-background-color: #384F7B;">
+         <effect>
+            <Reflection />
+         </effect>
+         <children>
+            <Button blendMode="COLOR_DODGE" cache="true" cacheHint="SPEED" contentDisplay="TOP" depthTest="ENABLE" layoutX="14.0" layoutY="15.0" onAction="#backButton" prefHeight="38.0" prefWidth="82.0" styleClass="backbutton">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Button>
+            <Label layoutX="518.0" layoutY="14.0" text="Sell Your Car Here" textFill="WHITE">
+               <font>
+                  <Font name="Britannic Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="1162.0" layoutY="39.0" text="Car Paradise" textFill="WHITE">
+               <font>
+                  <Font name="Century Schoolbook Italic" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ScrollPane layoutY="67.0" prefHeight="736.0" prefWidth="1262.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1175.0" prefWidth="1246.0">
+               <children>
+                  <AnchorPane layoutX="1.0" prefHeight="43.0" prefWidth="1246.0" style="-fx-background-color: #F47A42;">
+                     <children>
+                        <Label layoutX="555.0" layoutY="7.0" text="Vehicle Details">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <TextField fx:id="vehicleMakeField" layoutX="219.0" layoutY="74.0" prefHeight="33.0" prefWidth="226.0" promptText="Vehicle Make:" />
+                  <TextField fx:id="vehicleModelField" layoutX="511.0" layoutY="74.0" prefHeight="33.0" prefWidth="226.0" promptText="Vehicle Model:" />
+                  <TextField fx:id="modelYearField" layoutX="798.0" layoutY="74.0" prefHeight="33.0" prefWidth="226.0" promptText="Model Year:" />
+                  <TextField fx:id="vehicleColorField" layoutX="219.0" layoutY="133.0" prefHeight="33.0" prefWidth="226.0" promptText="Color:" />
+                  <TextField fx:id="vehicleBodyField" layoutX="511.0" layoutY="133.0" prefHeight="33.0" prefWidth="226.0" promptText="Body Style:" />
+                  <TextField fx:id="vehicleRegField" layoutX="798.0" layoutY="133.0" prefHeight="33.0" prefWidth="226.0" promptText="Registration No:" />
+                  <TextField fx:id="vehicleMilField" layoutX="219.0" layoutY="187.0" prefHeight="33.0" prefWidth="226.0" promptText="Mileage:" />
+                  <TextField fx:id="vehicleTansField" layoutX="511.0" layoutY="187.0" prefHeight="33.0" prefWidth="226.0" promptText="Transmission:" />
+                  <TextField fx:id="vehicleEngineField" layoutX="798.0" layoutY="187.0" prefHeight="33.0" prefWidth="226.0" promptText="Engine No:" />
+                  <TextField fx:id="vehicleFuelField" layoutX="219.0" layoutY="241.0" prefHeight="33.0" prefWidth="226.0" promptText="Fuel Type:" />
+                  <TextField fx:id="vehicleCylinderField" layoutX="511.0" layoutY="241.0" prefHeight="33.0" prefWidth="226.0" promptText="Cylinders:" />
+                  <TextField fx:id="vehicleChasisField" layoutX="798.0" layoutY="241.0" prefHeight="33.0" prefWidth="226.0" promptText="Chasis No:" />
+                  <AnchorPane layoutX="1.0" layoutY="286.0" prefHeight="43.0" prefWidth="1246.0" style="-fx-background-color: #F47A42;">
+                     <children>
+                        <Label layoutX="517.0" layoutY="6.0" text="Select Vehicle Features">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <CheckBox fx:id="airConditionCheckbox" layoutX="219.0" layoutY="356.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="189.0" text="Air Condition" />
+                  <CheckBox fx:id="allWheelDriveCheckbox" layoutX="219.0" layoutY="395.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="189.0" text="All Wheel Drive" />
+                  <CheckBox fx:id="powerLockDoorsCheckbox" layoutX="219.0" layoutY="436.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="189.0" text="Power Lock Doors" />
+                  <CheckBox fx:id="aloyWheelCheckbox" layoutX="417.0" layoutY="356.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="189.0" text="Aloy Wheel" />
+                  <CheckBox fx:id="remoteKeylessEntryCheckbox" layoutX="417.0" layoutY="395.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="189.0" text="Remote Keyless Entry" />
+                  <CheckBox fx:id="navigationSytemCheckbox" layoutX="417.0" layoutY="436.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="189.0" text="Navigation System" />
+                  <CheckBox fx:id="fourWheelDriveCheckbox" layoutX="624.0" layoutY="356.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="189.0" text="Four Wheel Drive" />
+                  <CheckBox fx:id="tintedWindowsCheckbox" layoutX="624.0" layoutY="395.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="189.0" text="Tinted Windows" />
+                  <CheckBox fx:id="cdPlayerCheckbox" layoutX="624.0" layoutY="436.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="189.0" text="CD/DVD Player" />
+                  <AnchorPane layoutX="1.0" layoutY="494.0" prefHeight="43.0" prefWidth="1246.0" style="-fx-background-color: #F47A42;">
+                     <children>
+                        <Label layoutX="568.0" layoutY="6.0" text="Add Images">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <ImageView fx:id="carImage1" fitHeight="185.0" fitWidth="320.0" layoutX="511.0" layoutY="573.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="carImage3" fitHeight="185.0" fitWidth="320.0" layoutX="511.0" layoutY="764.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="carImage2" fitHeight="185.0" fitWidth="320.0" layoutX="864.0" layoutY="573.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="carImage4" fitHeight="185.0" fitWidth="320.0" layoutX="864.0" layoutY="764.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="chooseImage" layoutX="219.0" layoutY="719.0" mnemonicParsing="false" onAction="#chooseImageHandleButton" text="Choose Image">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <AnchorPane layoutX="1.0" layoutY="961.0" prefHeight="43.0" prefWidth="1246.0" style="-fx-background-color: #F47A42;">
+                     <children>
+                        <Label layoutX="568.0" layoutY="6.0" text="Purchase Info">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="511.0" layoutY="547.0" text="Image Preview:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="sellerNameField" layoutX="182.0" layoutY="1049.0" prefHeight="28.0" prefWidth="235.0" promptText="Seller Name:" />
+                  <TextField fx:id="sellerContactField" layoutX="484.0" layoutY="1049.0" prefHeight="28.0" prefWidth="235.0" promptText="Contact No:" />
+                  <TextField fx:id="sellerPriceField" layoutX="761.0" layoutY="1049.0" prefHeight="28.0" prefWidth="235.0" promptText="Price:" />
+                  <Button layoutX="562.0" layoutY="1119.0" mnemonicParsing="false" onAction="#sellCarConfirmHandleButton" prefHeight="31.0" prefWidth="125.0" text="Confirm">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="158.0" layoutY="778.0" text="*You have to choose 4 photos">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="49.0" fitWidth="55.0" layoutX="158.0" layoutY="713.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/addImageIcon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
