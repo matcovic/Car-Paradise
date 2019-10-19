@@ -1,7 +1,7 @@
 # Car-Paradise
-
-Course No: CSE 2100
-|Course Name: Software Development-II
+Semester: 2.1 |
+Course No: CSE 2100 |
+Course Name: Software Development-II
 
 Submitted to:
 Mohsena Ashraf, Lecturer,Department of CSE, AUST. || Ms. Raqeebir Rab, Assistant Professor, Department of CSE, AUST.
